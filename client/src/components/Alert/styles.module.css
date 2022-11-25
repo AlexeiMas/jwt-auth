@@ -1,0 +1,52 @@
+.wrapper {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.9);
+    z-index: 10;
+}
+
+.alert {
+    display: grid;
+    place-items: center;
+    max-width: 700px;
+    background: #FFF;
+    border-radius: 1rem;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 11;
+}
+
+.alert p {
+    color: #0c1022;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+p.error {
+    color: red;
+}
+
+.close {
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: 10% 25%;
+    border: 1px solid rgba(0,0,0,.7);
+    padding: 1rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}

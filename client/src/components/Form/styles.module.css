@@ -1,0 +1,70 @@
+.formBox {
+    position: relative;
+    max-width: 500px;
+    height: 600px;
+    background: rgba(0,0,0,.75);
+    border-radius: 20px;
+    margin: 0 auto;
+    color: white;
+
+    display: grid;
+    /*grid-gap: 1rem;*/
+    place-items: center;
+    overflow: hidden;
+    padding: .5rem;
+}
+.formBox::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 290px);
+    height: calc(100% + 290px);
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: animate 4s linear infinite;
+}
+.formBox::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 290px);
+    height: calc(100% + 290px);
+    background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+    animation: animate2 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2 {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(calc(180deg + 360deg));
+    }
+}
+
+.formBox span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: #0c1022;
+    z-index: 1;
+}
+.formBox :not(:first-child) {
+    position: relative;
+    z-index: 2;
+}
+
+.contentForm, .actionsForm {
+    width: 80%;
+}
+
+.actionsForm {
+    display: grid;
+    grid-gap: 2rem;
+    margin: auto 0 15%;
+}
